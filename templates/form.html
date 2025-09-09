@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 4px; }
+        button { margin-top: 15px; padding: 10px; background: #003366; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Resume Builder</h1>
+    <h3>Personal information</h3>
+    <form method="POST">
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone:</label>
+        <input type="text" name="phone" required>
+
+        <label>Address:</label>
+        <input type="text" name="address">
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+
+        <label>Nationality:</label>
+        <input type="text" name="nationality">
+
+        <label>Profile Summary:</label>
+        <textarea name="profile"></textarea>
+
+        <label>Skills (comma separated):</label>
+        <input type="text" name="skills">
+
+        <label>Languages (comma separated):</label>
+        <input type="text" name="languages">
+
+        <h3>Education</h3>
+        <label>Degree 1:</label>
+        <input type="text" name="degree1">
+        <label>Institute:</label>
+        <input type="text" name="institute1">
+        <label>GPA:</label>
+        <input type="text" name="gpa1">
+        <label>Duration:</label>
+        <input type="text" name="duration1">
+
+        <label>Degree 2:</label>
+        <input type="text" name="degree2">
+        <label>Institute:</label>
+        <input type="text" name="institute2">
+        <label>GPA:</label>
+        <input type="text" name="gpa2">
+        <label>Duration:</label>
+        <input type="text" name="duration2">
+
+        <label>Internships:</label>
+        <textarea name="internships"></textarea>
+
+        <label>Extracurricular Activities:</label>
+        <textarea name="activities"></textarea>
+
+        <label>Research Work:</label>
+        <textarea name="research"></textarea>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+</body>
+</html>
