@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ data.name }} - Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <h2>{{ data.name }}</h2>
+        <p>{{ data.email }}</p>
+        <p>{{ data.phone }}</p>
+        <p>{{ data.address }}</p>
+        <p>{{ data.dob }}</p>
+        <p>{{ data.nationality }}</p>
+
+        <h3>Skills</h3>
+        <ul>
+            {% for skill in data.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Languages</h3>
+        <ul>
+            {% for lang in data.languages %}
+                <li>{{ lang }}</li>
+            {% endfor %}
+        </ul>
+    </aside>
+
+    <main class="content">
+        <section>
+            <h2>Profile</h2>
+            <p>{{ data.profile }}</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            {% for edu in data.education %}
+                <p><strong>{{ edu.degree }}</strong> - {{ edu.institute }} (GPA: {{ edu.gpa }}) {{ edu.duration }}</p>
+            {% endfor %}
+        </section>
+
+        <section>
+            <h2>Internships</h2>
+            <p>{{ data.internships }}</p>
+        </section>
+
+        <section>
+            <h2>Activities</h2>
+            <p>{{ data.activities }}</p>
+        </section>
+
+        <section>
+            <h2>Research</h2>
+            <p>{{ data.research }}</p>
+        </section>
+    </main>
+</div>
+</body>
+</html>
